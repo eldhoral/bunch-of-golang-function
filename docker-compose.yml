@@ -1,0 +1,20 @@
+version: '3.0'
+services:
+  app:
+    container_name: go_app
+    image: go_app
+    build:
+      context: .
+      dockerfile: ./docker/production/Dockerfile
+      args:
+        - repo_user={YOURUSERNAME}
+        - repo_token={GENERATEDTOKEN}
+        - repo_url={PRIVATEREPO}
+        - repo_organization={YOURORGANIZATION}
+        - app_name={APPNAME}
+    volumes: 
+      - ./log:/app/log
+      - .:/go/src/app
+      - ./empty:/go/src/app/docker
+    ports: 
+      - 8081:8081
