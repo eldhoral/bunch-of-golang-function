@@ -29,7 +29,7 @@ RUN git config \
 
 RUN export GOPRIVATE=${repo_url}/${repo_organization}/*
 
-COPY . /app
+ADD . /app
 
 RUN go mod download
 

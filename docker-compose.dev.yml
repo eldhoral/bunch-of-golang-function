@@ -13,7 +13,6 @@ services:
         - repo_organization={YOURORGANIZATION}
         - app_name={APPNAME}
     volumes: 
-      - .:/go/src/app
-      - ./empty:/go/src/app/docker
+      - .:/app
     ports: 
       - 8080:8080

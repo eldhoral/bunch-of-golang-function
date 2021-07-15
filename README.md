@@ -3,7 +3,7 @@
 Sample how to create docker for golang with Private Repository
 
 ## Environments
-- Development
+- Development (Hot Reload)
 - Production
 
 ## Setup
@@ -31,6 +31,13 @@ Open and edit docker-compose files:
 
 
 ## Usage
-```
-docker-compose -f docker-compose.dev.yml up --build
-```
+- Run as Development
+
+    ```
+    docker-compose -f docker-compose.dev.yml up --build
+    ```
+- Run as Production
+  
+    ```bash
+    docker-compose -f docker-compose.yml up --build
+    ```
