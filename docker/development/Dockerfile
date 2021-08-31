@@ -31,7 +31,7 @@ RUN export GOPRIVATE=${repo_url}/${repo_organization}/*
 
 ADD . /app
 
-RUN go mod download
+RUN go mod download 
 
 RUN go get github.com/githubnemo/CompileDaemon
 RUN go get bitbucket.org/liamstask/goose/cmd/goose
